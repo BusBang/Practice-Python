@@ -11,7 +11,12 @@ def highFrequencyLetterCount(word) :
             map[alpha] = 1
         else:
             map[alpha] += 1
-        print("map=>", map)
-        print(alpha)
-    return -1
-print(highFrequencyLetterCount(word))
+    max = -1
+    # letter = ''
+    for key in map:
+        if map[key] > max :
+            max = map[key]
+            # letter = key
+    return max
+print("result = ",highFrequencyLetterCount(word))
+print("result = ",highFrequencyLetterCount("welcome to blackparade"))
